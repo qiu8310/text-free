@@ -1,10 +1,10 @@
-# text-free
+# text-free [![Build Status](https://travis-ci.org/qiu8310/text-free.svg?branch=master)](https://travis-ci.org/qiu8310/text-free)
 
 > Update html content in browser
 > Replace text in any text file
 
 
-[Demo](https://github.com/qiu8310/demo-text-free)
+[Demo Project](https://github.com/qiu8310/demo-text-free)
 
 
 ## Getting Started
