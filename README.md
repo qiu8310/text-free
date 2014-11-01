@@ -1,4 +1,4 @@
-# text-free [![Build Status](https://travis-ci.org/qiu8310/text-free.svg?branch=master)](https://travis-ci.org/qiu8310/text-free)
+# text-free [![Build Status](https://travis-ci.org/qiu8310/text-free.svg?branch=master)](https://travis-ci.org/qiu8310/text-free) [![Code Climate](https://codeclimate.com/github/qiu8310/text-free/badges/gpa.svg)](https://codeclimate.com/github/qiu8310/text-free)
 
 > Update html content in browser
 > Replace text in any text file
