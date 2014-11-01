@@ -1,0 +1,9 @@
+test:
+  - jshint
+  - browserify
+  - karma
+
+
+dev:
+  - test
+  - watch
