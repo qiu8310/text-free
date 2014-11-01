@@ -18,6 +18,7 @@
   "trailing": true,
   "smarttabs": true,
   "maxlen": 120,
+  "-W100": true,
   "globals": {
   }
 }
