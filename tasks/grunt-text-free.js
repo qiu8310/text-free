@@ -6,14 +6,15 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask( 'textFree', 'Replace specified format text with defined json data', function(command) {
 
-    var options = xOption(this.options()),
-      data = RW.readJSON(grunt, options.jsonFile, options.jsonFileCycleMinutes);
+    var options = xOption(this.options());
 
     // TF connect 插件专用的
     if (command && command.indexOf('__') === 0 && (typeof global[command] === 'function')) {
       global[command].call(this, options);
       return true;
     }
+
+    var data = RW.readJSON(grunt, options.jsonFile, options.jsonFileCycleMinutes);
 
     this.files.forEach(function(fSet) {
       fSet.src.forEach(function(file) {

@@ -22,7 +22,7 @@ grunt.loadNpmTasks('text-free');
 ### use with connect
 
     var TF = require('text-free');
-    grunt.loadTasks('text-free');
+    grunt.loadNpmTasks('text-free');
     
     function getConnectMiddleWares(webRootDirs) {
       return TF.connectHelper(grunt, webRootDirs);
