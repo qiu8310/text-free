@@ -4,6 +4,9 @@
 > Replace text in any text file
 
 
+[Demo](https://github.com/qiu8310/demo-text-free)
+
+
 ## Getting Started
 This plugin requires Grunt `~0.4.0`
 
