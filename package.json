@@ -1,7 +1,7 @@
 {
   "name": "text-free",
   "version": "0.1.0",
-  "description": "Replace specified format text with pre-defined json data in grunt",
+  "description": "Update html content in browser",
   "main": "scripts/main.js",
   "scripts": {
     "test": "grunt test"
@@ -25,7 +25,10 @@
     "middleware",
     "plugin"
   ],
-  "author": "Zhonglei Qiu",
+  "author": {
+    "name": "Zhonglei Qiu",
+    "email": "qiuzhongleiabc@126.com"
+  },
   "license": "MIT",
   "dependencies": {
     "on-headers": "~1.0.0"
