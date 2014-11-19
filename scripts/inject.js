@@ -343,11 +343,26 @@
   document.addEventListener('click', documentClickHandler, false);
 
 
+  var domReady = false;
+  function domReadyHandler() {
+    domReady = true;
+  }
+  document.addEventListener('DOMContentLoaded', domReadyHandler, false);
+  window.addEventListener('load', domReadyHandler, false);
+  if (document.readyState === "complete") { domReadyHandler(); }
+
   window.__tfUpdateNodes = function() {
+    if (!domReady) {
+      setTimeout(function() {
+        window.__tfUpdateNodes();
+      }, 500);
+      return ;
+    }
     [].slice.call(document.querySelectorAll(tfInjectClassName)).forEach(function(el) {
       el.classList.remove(tfInjectClassName);
     });
     tfNodes = injectClassToTfParentNode();
+    window.console.info('textFree: view updated! You can manual update with: __tfUpdateNodes()');
   };
 
   window.__tfUpdateNodes();

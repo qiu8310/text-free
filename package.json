@@ -1,6 +1,6 @@
 {
   "name": "text-free",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Update html content in browser",
   "main": "scripts/main.js",
   "scripts": {
@@ -20,10 +20,9 @@
     "text replace",
     "file",
     "template",
-    "grunt",
     "connect",
     "middleware",
-    "plugin"
+    "gruntplugin"
   ],
   "author": {
     "name": "Zhonglei Qiu",
