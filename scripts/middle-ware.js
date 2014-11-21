@@ -85,13 +85,15 @@ module.exports = function(grunt, serverDirs) {
    * JS 脚本插入在 </body> 上面，如果不存在，则不插入
    */
   function inject(htmlContent, options) {
+    var injectContent;
     if (htmlContent.indexOf('</body>') > 0) {
       var content = grunt.file.read(path.join(__dirname, 'inject.js'));
       content = content.replace('__textFreeOptions;', JSON.stringify(options) + ';');
-      var injectContent = '<script>'+ content +'</script>';
+      injectContent = '<script>'+ content +'</script>';
       return htmlContent.replace('</body>', injectContent + '</body>');
     } else {
-      return htmlContent + '<script>window.__tfUpdateNodes && window.__tfUpdateNodes();</script>';
+      injectContent = '<script>window.__tfUpdateNodes && window.__tfUpdateNodes();</script>';
+      return htmlContent.replace(/(<\/[-\w]+>)[^>]*$/, injectContent + '$1');
     }
   }
 

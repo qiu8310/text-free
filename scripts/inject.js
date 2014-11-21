@@ -5,6 +5,9 @@
  */
 
 (function() {
+  if (window.__tfUpdateNodes) {
+    return false;
+  }
 
   var options = __textFreeOptions; // inject 注入的变量
   var prefix = options.injectClassPrefix || '__tf-';
